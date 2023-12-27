@@ -1,1 +1,4 @@
 *.class
+output.txt
+output2.txt
+input_fast.txt

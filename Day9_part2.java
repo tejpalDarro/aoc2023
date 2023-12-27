@@ -6,15 +6,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Day9 { 
+// work in progress.....
+public class Day9_part2 { 
     static long SUM_MAX = 0;
     public static void main(String[] args) throws IOException {
         String str = """
-13 21 50 108 198 331 552 989 1955 4162 9159 20221 44162 95029 201507 421327 868273 1760839 3506560 6842958 13065390
+10 13 16 21 30 45
                     """;
         int cnt = 1;
-        ArrayList<Long> outputLines = new ArrayList<>();
-        FileWriter writer = new FileWriter("output2.txt");
+        // ArrayList<Long> outputLines = new ArrayList<>();
+        // FileWriter writer = new FileWriter("output2.txt");
         BufferedReader br = new BufferedReader(new FileReader("input.txt"));
         for (String s : br.lines().toList()) {
 
@@ -27,15 +28,15 @@ public class Day9 {
             printList(list);
 
             long temp = calZero(list);
-            outputLines.add(temp);
+            // outputLines.add(temp);
             SUM_MAX += temp;
             System.out.println("temp cnt : " + cnt + ", val: " + temp);
             ++cnt;
         }
-        for (Long i : outputLines) {
-            writer.write(i + System.lineSeparator());
-        }
-        writer.close();
+        // for (Long i : outputLines) {
+        //     writer.write(i + System.lineSeparator());
+        // }
+        // writer.close();
 
         System.out.println(SUM_MAX);
         br.close();
@@ -59,7 +60,7 @@ public class Day9 {
         }
         printList(newList);
         long res = calZero(newList);
-        return l.get(l.size()-1) + res;
+        return l.get(0) - res;
     }
 
     public static void printList(List<Long> l) {
