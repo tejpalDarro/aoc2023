@@ -4,13 +4,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Arrays;
 
-class Direction {
-    private static int[] NORTH = new int[] {-1, 0}; 
-    private static int[] SOUTH = new int[] {+1, 0}; 
-    private static int[] EAST = new int[] {0, +1}; 
-    private static int[] WEST = new int[] {0, -1};
-}
 
+// stack over flow 
 enum Pos {
     NORTH, SOUTH, EAST, WEST;
 }

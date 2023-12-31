@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 
+// not working use DAY10_new
 public class Day10 {
     public static void main(String[] args) throws IOException {
         String str = """        
