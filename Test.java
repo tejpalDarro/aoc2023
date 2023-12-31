@@ -10,25 +10,32 @@ import java.util.Set;
 
 public class Test {
     public static void main(String[] args) throws FileNotFoundException, IOException{
-        System.out.println(stringCheck("1Reder1"));
-
-        String s = "(AAA, BBB)";
-        List<String> list = Arrays.stream(s
-                                    .trim()
-                                    .replace("(","" )
-                                    .replace(")","")
-                                    .split(","))
-                                    .map(String::trim)
-                                    .toList();
-
-
-        System.out.println(list.get(0));
-        System.out.println(list.get(1));
+        // System.out.println(stringCheck("1Reder1"));
+        //
+        // String s = "(AAA, BBB)";
+        // List<String> list = Arrays.stream(s
+        //                             .trim()
+        //                             .replace("(","" )
+        //                             .replace(")","")
+        //                             .split(","))
+        //                             .map(String::trim)
+        //                             .toList();
+        //
+        //
+        // System.out.println(list.get(0));
+        // System.out.println(list.get(1));
+        int x = 4;
+        x += Integer.parseInt(getString());
+        System.out.println(x);
     }
 
-    public static boolean stringCheck(String s) {
-        final String temp = s.toLowerCase().replaceAll("[^a-z0-9]", "");
-        final String res = new StringBuilder(temp).reverse().toString();
-        return res.equals(temp);
+    public static String getString() {
+        return "1";
     }
+
+    // public static boolean stringCheck(String s) {
+    //     final String temp = s.toLowerCase().replaceAll("[^a-z0-9]", "");
+    //     final String res = new StringBuilder(temp).reverse().toString();
+    //     return res.equals(temp);
+    // }
 }
